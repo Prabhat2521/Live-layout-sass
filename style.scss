@@ -1,0 +1,98 @@
+@import "color";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+p{
+    color:$para-color;
+    font-size: 0.8rem;
+}
+.btn{
+    padding:5px 20px;
+    border: 1px solid $primary-color;
+    
+}
+%input{
+    margin:10px 0;
+    font-size: 14px;
+    height: 20px;
+    padding: 15px 8px;
+    border:1px solid $base-color;
+    border-radius: 4px;
+    outline:none;
+}
+
+.container{
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid $base-color;
+    display: flex;
+    margin-top:20px;
+    h4{
+        font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.3333;
+    }
+    .name{
+        margin-top:20px;
+        .first{
+            @extend %input;
+        }
+        .last{
+            @extend %input;
+        }
+    }
+    .mail{
+        @extend %input;
+        padding-bottom: 25px;
+        margin-right: 17px;
+        .user{
+            width:80%;
+            border:none
+        }
+    }
+    
+   
+    .h-address{
+        color:$primary-color;
+        margin-top:1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .pass{
+        @extend %input;
+    }
+    .show{
+        height:12px;
+        margin-top: 11px;
+        input{
+            margin-right:5px;
+        }
+    }
+    .sign-in{
+        display: flex;
+        justify-content: space-between;
+        margin-top:25px;
+        align-items: center;
+        div{
+            color:$primary-color;
+        }
+        .btn-primary{
+            @extend .btn;
+            color:$text-white;
+            background-color: $primary-color;
+         
+        }
+    }
+    
+
+    .right{
+        figcaption{
+            text-align: center;
+        }
+    }
+}
